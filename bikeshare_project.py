@@ -6,7 +6,6 @@ Created on Thu Oct 15 20:29:01 2020
 """
 import time
 import pandas as pd
-import numpy as np
 import datetime as dt
 
 CITY_DATA = { '1': 'chicago.csv',
