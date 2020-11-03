@@ -6,7 +6,6 @@ Created on Thu Oct 15 20:29:01 2020
 """
 import time
 import pandas as pd
-import numpy as np
 import datetime as dt
 
 CITY_DATA = { '1': 'chicago.csv',
@@ -145,14 +144,14 @@ def station_stats(df):
 
     # display most commonly used start station
     start_station = df['Start Station'].mode()[0]
-    print("The most commonly used start station is: " + str(start_station))
+    print("The most frequently occuring start station is: " + str(start_station))
     # display most commonly used end station
     end_station = df['End Station'].mode()[0]
-    print("\nThe most commonly used end station is: " + end_station)
+    print("\nThe most frequently occuring end station is: " + end_station)
     # display most frequent combination of start station and end station trip
     df['journey'] = df['Start Station'] + ' to ' + (df['End Station'])
     start_end_station = df['journey'].mode()[0]
-    print("\nThe most commonly used start and end station is from: " + start_end_station)
+    print("\nThe most frequently occuring start and end station is from: " + start_end_station)
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
